@@ -58,29 +58,32 @@ OBS: Quando não precisamos de um valor, podemos descartá-lo utilizando o under
 for _, l in enumerate(nome):
     print(l)
 
-
-    
-for valor in enumerate(nome):
-    print(valor[0])
-   
-    """
-
-
 nome = 'Geek University'
 lista = [1, 3, 5, 7, 9]
 numeros = range(1, 10) # temos que transformar em uma lista
 
 
+        
+for valor in enumerate(nome):
+    print(valor[0])
+   
 
-qtd = int(input("Quantas vezes esse loop deve rodar?"))
+qtd = int(input("Quantas vezes esse loop deve rodar? "))
 soma = 0
 
-
-for n in range(1, qtd):
-    print(f'Imprimindo{n}')
-
-
-for n in range(1, qtd+1):
+for n in range(0, qtd):
     num = int(input(f'Informe o {n}/{qtd} vqlor: '))
     soma = soma + num
 print(f'A soma é {soma}')
+    
+
+nome = 'Gabriella'
+for letra in nome:
+    print(letra, end='')
+
+
+
+for _ in range(3):
+    for num in range(0, 10):
+        print('\U0001F60D' * num)
+"""
