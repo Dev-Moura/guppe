@@ -1,7 +1,7 @@
 """
 Docstring for modulo_6.Listas
 
-Listas
+Listas (list)
 
 Listas em Python funcional como vetores/matrizes (arrays) em outras linguagens, como a diferença
 de serem DINÂMICO e também de podermos colocar QUALQUER tipo dado.
