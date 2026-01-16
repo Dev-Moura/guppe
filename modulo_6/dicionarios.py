@@ -83,3 +83,171 @@ localidades = {
 
 print(localidades)
 print(type(localidades))
+
+# Adicionando elementos em um dicionário
+
+receita = {'jan': 100, 'fev': 120, 'mar': 300}
+
+print(receita)
+print(type(receita))
+
+# Forma 1
+
+receita['abr'] = 350
+
+print(receita)
+
+# Forma 2
+
+novo_dado = {'mai': 500}
+
+receita.update(novo_dado) # receita.update({'mai': 500})
+
+print(receita)
+
+# Atualizando dados em um dicionário
+
+# Forma 1
+
+receita['mai'] = 550
+
+print(receita)
+
+# Forma 2
+
+receita.update({'mai': 600})
+print(receita)
+
+# CONCLUSÃO: A forma mais fácil e prática de adicionar ou atualizar dados em um dicionário é a mesma.
+# CONCLUSÃO: Em dicionários, NÃO podemos ter chaves repetidas.
+
+# Remover dados de um dicionário
+
+receita = {'jan': 100, 'fev': 120, 'mar': 300}
+
+# Forma 1
+# Aqui precisamos SEMPRE infromar a chave do item que queremos remover, caso não encontre o item, será gerado o erro KeyError
+ret = receita.pop('mar')
+print(ret)
+
+# Ao removermos um objeto, o valor deste objeto é sempre retornado.
+print(receita)
+
+# Forma 2 
+
+del receita['fev']
+
+print(receita)
+
+# KeyError se a chave não for encontrada
+# Neste caso o valore removido não é retornado.
+del receita['fev']
+
+# Imagine que você tem um comércio eletrônico, onde temos um carrinho de compras na qual adicionamos produtos.
+"""
+Carrinho de compras
+    produto 1:
+        - nome;
+        - quantidade;
+        - preço;
+    produto 2:
+        - nome;
+        - quantidade;
+        - preço;
+"""
+
+# 1 - Poderiamos utilizar uma lista para isso? Sim
+
+carrinho = []
+
+produto1 = ['Playstation 4', 1, 2300.00]
+produto2 = ['God of War 4', 1, 150.00]
+
+carrinho.append(produto1)
+carrinho.append(produto2)
+
+print(carrinho)
+
+# Teríamos que saber qual é o índice de cada informação no produto.
+
+# 2 - Poderiamos utilizar uma tupla para isso? Sim
+
+produto1 = ('Playstation 4', 1, 2300.00)
+produto2 = ('God of War 4', 1, 150.00)
+
+carrinho = (produto1, produto2)
+
+print(carrinho)
+
+# Teríamos que saber qual é o índice de cada informação no produto.
+
+# 3 - Poderiamos utilizar um dicionário para isso? Sim
+
+carrinho = []
+
+produto1 = {'nome': 'Playstation 4', 'quantidade': 1, 'preço': 2300.00}
+produto2 = {'nome': 'God of War 4', 'quantidade': 1, 'preço': 150.00}
+
+carrinho.append(produto1)
+carrinho.append(produto2)
+
+print(carrinho)
+
+# Desta forma, facilmente adicionamos ou removemos produtos no carrinho e em cada produto, podemos ter a certeza
+# sobre cada informação.
+
+# Métodos de dicionários.
+
+d = dict(a=1, b=2, c=3)
+
+print(d)
+print(type(d))
+
+# Limpar o dicionário (Zerar dados)
+
+d.clear()
+print(d)
+
+# Copiando um dicionário para outro
+# Forma 1 Deep Copy
+
+novo = d.copy()  
+print(novo)
+
+novo['d'] = 4
+
+print(d)
+print(novo)
+
+# Forma 2 Shallow Copy
+
+novo = d
+
+print(novo)
+
+novo['d'] = 4
+
+print(d)
+print(novo)
+
+# Forma não usual de criação de dicionários
+
+outro = {}.fromkeys('a', 'b')  # Cria as chaves com o valor informado
+
+print(outro)
+print(type(outro)) 
+
+usuario = {}.fromkeys(['nome', 'pontos', 'idade', 'profile'], 'desconhecido')
+print(usuario)
+print(type(usuario))
+
+# O método fromkeys recebe dois parâmetros: um iterável e um valor.
+# Ele vai gerar para cada valor do iterável uma chave e irá atribuir a esta chave o valor informado.
+
+veja = {}.fromkeys('teste', 'valor')
+print(veja)
+print(type(veja))
+
+veja = {}.fromkeys(range(1, 11), 'novo')
+
+print(veja)
