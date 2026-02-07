@@ -77,3 +77,5 @@ for i in range(5):
 # Em python, podemos inclusive criar variáveis do tipo de uma função e executar esta função através da variável
 canta = cantar_parabens
 canta()
+
+
