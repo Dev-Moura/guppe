@@ -13,7 +13,6 @@ ret_pr = print(numeros)
 print(f'Retorno de print: {ret_pr}')
  
 # Exemplo funçao
-
 def quadradado_de_7():
     print(7*7)
 
