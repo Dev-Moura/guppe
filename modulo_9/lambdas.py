@@ -1,10 +1,17 @@
 """
-Uitlizando Lambdas
+Utilizando Lambdas
 
-Conhecidas por expressoes lambdas funcao sem nome igual arrow function do js
+Conhecidas por expressões lambdas, ou simplesmente lambdas, são funções sem nome, ou seja,
+funções anônimas.
+
+# Função em Python
+
+def soma (a, b):
+    return a + b
+
 """
+from modulo_7.funcoes_com_parametro import sobrenome
 
-# função em python
 
 def funcao(x):
     return 3 * x + 1
@@ -13,12 +20,10 @@ print(funcao(4))
 print(funcao(7))
 
 # Expressão Lambda
-
 lambda x: 3 * x + 1
 
-# E como utilizar a expressão?
-# Não pythonico
-calc = lambda x: 3 * x + 1 
+# E como utilizar a expressão lambda?
+calc = lambda x: 3 * x + 1
 
 print(calc(4))
 print(calc(7))
@@ -28,48 +33,49 @@ print(calc(7))
 nome_completo = lambda nome, sobrenome: nome.strip().title() + ' ' + sobrenome.strip().title()
 
 print(nome_completo(' angelina', 'JOLIE'))
-print(nome_completo(' FELICITY    ', ' JONES  '))
+print(nome_completo(' FELICITY    '  ,  'Jones    '))
 
-# Em funções python podemos ter nenhum ou várias entradas. Em lambdas também
+# Em funçõs Python podemos ter nenhuma ou várias entradas. Em lambdas também
 
-amar = lambda: 'como não amar python? '
+amar = lambda : 'Como não amar Python? '
 
 uma = lambda x: 3 * x + 1
 
 duas = lambda x, y: (x * y) ** 0.5
 
-tres = lambda x, y ,z:  3 / (1 / x + 1 / y + 1 / z)
+tres = lambda x, y, z: 3 / (1 / x + 1 / y + 1 / z)
 
-# n = lambda x1, x1, ..., xn: <expressão>
+print(amar())
+print(uma(6))
+print(duas(5, 7))
+print(tres(3,6, 9))
 
-print(amar)
-print(uma)
-print(duas)
-print(tres)
+# OBS: Se passarmos mais argumentos do que parâmetros esperados teremos TypeError
 
-# OBS: se passar argumentos demais vai dar typeError
+# Outro exemplo
 
-autores = ['Isaac Asimov', 'Ray Bradbury', 'Robert Heinlein', 'Arthur C. Clarke', 'Frank Herbert', 'Orson Scott Card', 'Douglas Adams', 'H. G. Wells', 'Leigh Brackett']
-
-
-print(autores)
-
-autores.sort(key=lambda sobrenome: sobrenome.split(' ')[-1].lower())
+autores = ['Isaac Asimov', 'Ray Bradbury', 'Robert Heinlein', 'Arthur C. Clarke', 'Frank Herbert', 'Orson Scoot Card',
+           'Douglas Adams', 'H. G. Wells', 'Leigh Brackett']
 
 print(autores)
 
-# func quadrática
+autores.sort(key=lambda sobrenome: sobrenome.split(" ")[-1].lower())
+
+print(autores)
+
+# Função Quadrática
 # f(x) = a * x ** 2 + b * x + c
 
-# Definindo a função
+# Definindo a func
 
 def geradora_funcao_quadratica(a, b, c):
-    """ Retorna a função x """
+    """Retorna a função f(x) = a * x ** 2 + b * x + c"""
     return lambda x: a * x ** 2 + b * x + c
 
-reste = geradora_funcao_quadratica(2, 3 , -5)
+teste = geradora_funcao_quadratica(2, 3, -5)
 
 print(teste(0))
 print(teste(1))
 print(teste(2))
 
+print(geradora_funcao_quadratica(2, 3, -5)(2))
