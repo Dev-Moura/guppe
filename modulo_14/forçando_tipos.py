@@ -1,8 +1,6 @@
 """
 Forçando tipos de dados com decoradores.
 
-
-
 """
 
 def forca_tipo(*tipos):
