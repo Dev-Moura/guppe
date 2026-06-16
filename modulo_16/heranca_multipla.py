@@ -45,8 +45,6 @@ Não importa se a derivação é direta ou indireta. A classe filha herda todos 
 
 """
 
-from string import printable
-
 
 class Animal:
     def __init__(self, nome):
