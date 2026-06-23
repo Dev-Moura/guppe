@@ -486,6 +486,3 @@ uv run mypy modulo_21/
 | 22 | Novidades do Python 3.8+ | 5 | ✅ |
 | | **Total** | **125** | **21/21** |
 
----
-
-> *README gerado com ❤️ por Friday — 23/06/2026*
